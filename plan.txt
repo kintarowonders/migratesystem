@@ -1,0 +1,9 @@
+The plan to migrate systems is an algorithm which:
+* Goes through the 'users' group for every user.
+* For every user it moves their home directory, adds a user to the new system
+	and changes permissions for the moved home directory for that user.
+* Goes through every site symlink in home directories, moves that site and sets
+	permission for that user.
+* Moves MySQL tables for all users.
+* Moves nginx configs which should point to the sites directories for all users.
+
